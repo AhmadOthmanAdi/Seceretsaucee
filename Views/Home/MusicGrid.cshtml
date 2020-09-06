@@ -1,0 +1,29 @@
+﻿@model IEnumerable<SeceretsauceeDotCom.Models.MusicDB>
+@{
+    ViewBag.Title = "MusicGrid";
+}
+
+<h2>Dataset for Music</h2>
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th> Id </th>
+        <th>Track Name </th>
+        <th>Artist Name </th>
+        <th>Status</th>
+        <th>Link</th>
+    </tr>
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td>@d.ID</td>
+            <td>@d.TrackName</td>
+            <td>@d.ArtistName</td>
+            <td>@d.Status</td>
+            <td>@d.Link</td>
+        </tr>
+    }
+</table>
+
+<h1 class="text-center">Coming soon</h1>
+<h2 class="text-center text-danger">Music Player</h2>
+

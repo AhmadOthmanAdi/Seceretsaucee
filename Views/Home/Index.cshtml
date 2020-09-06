@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@Styles.Render("~/Content/css")
+
+<div class="jumbotron">
+    <h1>Seceretsaucee <code>Live Stream</code></h1>
+    <p class="lead">Playing on my RaspberryPi</p>
+    <p><a href="adiothman.com" class="btn btn-primary btn-lg">Who's behind this? &raquo;</a></p>
+</div>
+<div class="container-fluid">
+    <div class="row-no-gutters">
+        <iframe src="https://player.twitch.tv/?channel=toniexxii&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+    </div>
+</div>
+<!-- Load the Twitch embed script -->
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+<!-- Create a Twitch.Player object. This will render within the placeholder div -->
+<script type="text/javascript">
+    new Twitch.Player("twitch-embed", {
+        channel: "toniexxii"
+    });
+</script>
